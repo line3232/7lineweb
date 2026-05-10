@@ -106,7 +106,7 @@
             <h3 class="hw-card-title" data-i18n="hw.card3_title">احصل على<br>عرض سعر</h3>
           </div>
           <div class="hw-card-bottom">
-            <span class="hw-card-label" data-i18n="nav.contact">تواصل معنا</span>
+            <span class="hw-card-label" data-i18n="nav.contact">تواصل مع المبيعات</span>
             <button class="hw-arrow" aria-label="Contact"><i class="fas fa-arrow-left"></i></button>
           </div>
         </div>
@@ -270,17 +270,14 @@
   </section>
 
   <!-- ══════════════ TRUST & CERTIFICATIONS ══════════════ -->
-  <section class="trust-certs-section" id="certificates" data-aos="fade-up">
-    <div class="section-header">
-      <div class="section-tag" data-i18n="section.certs_tag">اعتمادات دولية</div>
-      <h2>ثقتنا <span style="color:var(--primary)">وشهاداتنا</span></h2>
-      <div class="section-underline"></div>
-      <p data-i18n="section.certs_sub">معتمدون دولياً في مجالات الجودة والسلامة والبيئة من قِبل جهات دولية مستقلة</p>
-    </div>
-    <div class="certs-grid">
+  <section class="trust-certs-section" id="certifications">
+    <div class="section-tag" data-i18n="section.certs_tag">اعتمادات دولية</div>
+    <h2 data-i18n="section.certs_title">ثقتنا وشهاداتنا</h2>
+    <p data-i18n="section.certs_subtitle">معتمدون دولياً في مجالات الجودة والسلامة والبيئة من قِبل جهات دولية مستقلة</p>
 
+    <div class="certs-grid">
       <!-- ISO 9001 -->
-      <div class="cert-card" data-aos="fade-up" data-aos-delay="0">
+      <div class="cert-card" data-aos="fade-up">
         <div class="cert-emblem cert-quality">
           <span class="cert-iso-top">ISO</span>
           <span class="cert-iso-num">9001</span>
@@ -293,10 +290,10 @@
             <span><i class="fas fa-building"></i> ARS Assessment Pvt. Ltd.</span>
             <span><i class="fas fa-calendar-check"></i> <span data-i18n="cert.valid">صالحة حتى أغسطس 2027</span></span>
           </div>
-          <a href="iso-cert-3.pdf" class="cert-pdf-btn" target="_blank" rel="noopener">
-            <i class="fas fa-file-pdf"></i>
-            <span data-i18n="cert.download">تحميل الشهادة</span>
-          </a>
+          <button class="cert-view-btn" onclick="openCertModal('iso-cert-1-1.png', 'ISO 9001:2015')">
+            <i class="fas fa-eye"></i>
+            <span data-i18n="cert.view">عرض الشهادة</span>
+          </button>
         </div>
       </div>
 
@@ -314,10 +311,10 @@
             <span><i class="fas fa-building"></i> ARS Assessment Pvt. Ltd.</span>
             <span><i class="fas fa-calendar-check"></i> <span data-i18n="cert.valid">صالحة حتى أغسطس 2027</span></span>
           </div>
-          <a href="iso-cert-1.pdf" class="cert-pdf-btn" target="_blank" rel="noopener">
-            <i class="fas fa-file-pdf"></i>
-            <span data-i18n="cert.download">تحميل الشهادة</span>
-          </a>
+          <button class="cert-view-btn" onclick="openCertModal('iso-cert-2-1.png', 'ISO 14001:2015')">
+            <i class="fas fa-eye"></i>
+            <span data-i18n="cert.view">عرض الشهادة</span>
+          </button>
         </div>
       </div>
 
@@ -335,16 +332,29 @@
             <span><i class="fas fa-building"></i> ARS Assessment Pvt. Ltd.</span>
             <span><i class="fas fa-calendar-check"></i> <span data-i18n="cert.valid">صالحة حتى أغسطس 2027</span></span>
           </div>
-          <a href="iso-cert-2.pdf" class="cert-pdf-btn" target="_blank" rel="noopener">
-            <i class="fas fa-file-pdf"></i>
-            <span data-i18n="cert.download">تحميل الشهادة</span>
-          </a>
+          <button class="cert-view-btn" onclick="openCertModal('iso-cert-3-1.png', 'ISO 45001:2018')">
+            <i class="fas fa-eye"></i>
+            <span data-i18n="cert.view">عرض الشهادة</span>
+          </button>
         </div>
       </div>
-
     </div>
   </section>
 
+  <!-- Certificate Modal -->
+  <div id="certModal" class="cert-modal">
+    <div class="cert-modal-content">
+      <button class="cert-modal-close" onclick="closeCertModal()">
+        <i class="fas fa-times"></i>
+      </button>
+      <img id="certModalImage" class="cert-modal-image" src="" alt="Certificate">
+    </div>
+  </div>
+        <i class="fas fa-times"></i>
+      </button>
+      <img id="certModalImage" class="cert-modal-image" src="" alt="Certificate">
+    </div>
+  </div>
   <!-- ══════════════ ABOUT V2 ══════════════ -->
   <section class="about-v2" id="about">
     <div class="about-v2-grid">
@@ -353,7 +363,7 @@
         <h2 data-i18n="home.about_title">مصنع الخط السابع<br>رائد صناعة التغليف</h2>
         <p data-i18n="home.about_desc">تأسس مصنع الخط السابع للصناعات البلاستيكية بهدف تقديم حلول تغليف متكاملة تلبي احتياجات القطاعات الصناعية والغذائية والتجارية في المملكة.</p>
         <a href="contact.html" class="btn-main">
-          <span data-i18n="nav.contact">تواصل معنا</span>
+          <span data-i18n="nav.contact">تواصل مع المبيعات</span>
           <i class="fas fa-arrow-left"></i>
         </a>
       </div>
@@ -375,7 +385,7 @@
     <h2 data-i18n="home.contact_title">ابدأ شراكتك معنا اليوم</h2>
     <p data-i18n="home.contact_subtitle">فريقنا المتخصص جاهز لمساعدتك في اختيار أفضل حلول التغليف لمشروعك.</p>
     <a href="contact.html" class="btn-white">
-      <span data-i18n="nav.contact">تواصل معنا</span>
+      <span data-i18n="nav.contact">تواصل مع المبيعات</span>
       <i class="fas fa-arrow-left"></i>
     </a>
   </section>
@@ -392,7 +402,7 @@
         <div class="footer-social">
           <a href="https://instagram.com" class="footer-social-link" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           <a href="https://linkedin.com" class="footer-social-link" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://wa.me/966545424060" class="footer-social-link" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://wa.me/966545424060" class="footer-social-link" target="_blank" rel="noopener" aria-label="واتساب المبيعات"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
       <div class="footer-col">
